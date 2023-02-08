@@ -27,6 +27,10 @@
     justify-content: space-between;
     gap: 65px;
 
+    @media screen and (max-width: 600px){
+      gap: 0;
+    }
+
     &_dropdown{
       width: 200px;
 
