@@ -1,0 +1,65 @@
+@import "src/scss/variables";
+
+.popular {
+  margin-top: 120px;
+
+  h2 {
+    font-family: 'Prata', sans-serif;
+    font-size: 40px;
+    color: #303030;
+    margin-bottom: 40px;
+
+    @media screen and (max-width: 600px){
+      font-size: 22px;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    gap: 20px;
+
+    @media screen and (max-width: 900px){
+      flex-wrap: wrap;
+    }
+  }
+
+  &__card {
+    width: 100%;
+    max-width: 200px;
+
+    @media screen and (max-width: 900px){
+      max-width: 229px;
+    }
+
+    @media screen and (max-width: 600px) {
+      max-width: 100%;
+    }
+
+    a {
+      height: 259px;
+      background-color: $primary-color;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &:hover img {
+        transform: scale(1.2);
+      }
+    }
+
+    img {
+      margin: auto 0;
+      transition: $transition-l;
+    }
+
+    h3 {
+      max-width: 148px;
+      font-size: 16px;
+      line-height: 100%;
+      text-align: center;
+      color: #303030;
+      padding-bottom:  25px;
+      margin: 0;
+    }
+  }
+}

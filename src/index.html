@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Krayt</title>
+</head>
+
+<body class="root">
+
+<header class="header">
+    <div class="header__top">
+        <div class="dropdown header__top_dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                Санкт-Петербург
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item active" href="#">Москва</a></li>
+                <li><a class="dropdown-item" href="#">Нижний Новгород</a></li>
+                <li><a class="dropdown-item" href="#">Ростов-на-Дону</a></li>
+            </ul>
+        </div>
+        <div class="header__center">
+            <a href="tel:88007852535">8 800 785-25-35</a>
+            <img src="<%= require('./img/logo.svg') %>" alt="logo">
+            <div class="header__auth">
+                <a href="#">Вход</a>
+                <span></span>
+                <a href="#">Регистрация</a>
+            </div>
+        </div>
+        <div class="header__actions">
+            <button class="heart">
+                <span>23</span>
+            </button>
+            <button class="chart"></button>
+            <button class="cart"></button>
+
+        </div>
+        <nav class="header__navbar header__navbar_mob navbar navbar-expand-lg">
+            <div class="container-fluid">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Каталог</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Акции</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Бренды</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Магазины</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">О нас</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Доставка и оплата</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Статьи</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <img src="<%= require('./img/search.svg') %>" alt="search">
+                        <input class="form-control me-2" type="search" placeholder="Поиск по сайту" aria-label="Search">
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <nav class="header__navbar header__navbar_desc navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Акции</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Бренды</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Магазины</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Доставка и оплата</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Статьи</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <img src="<%= require('./img/search.svg') %>" alt="search">
+                    <input class="form-control me-2" type="search" placeholder="Поиск по сайту" aria-label="Search">
+                </form>
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main class="main">
+
+    <section class="hero">
+        <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="hero__carousel">
+                        <div class="hero__left">
+                            <p>Суперскидка до 60%</p>
+                            <h1>НА БРИЛЛИАНТЫ</h1>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <img src="<%= require('./img/hero_img.png') %>" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero__carousel">
+                        <div class="hero__left">
+                            <p>Суперскидка до 60%</p>
+                            <h1>НА БРИЛЛИАНТЫ</h1>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <img src="<%= require('./img/hero_img.png') %>" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero__carousel">
+                        <div class="hero__left">
+                            <p>Суперскидка до 60%</p>
+                            <h1>НА БРИЛЛИАНТЫ</h1>
+                            <a href="#">Подробнее</a>
+                        </div>
+                        <img src="<%= require('./img/hero_img.png') %>" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="popular">
+        <h2>Популярные категории</h2>
+        <ul class="popular__cards">
+            <li class="popular__card">
+                <a href="#">
+                    <img src="<%= require('./img/ring_pop.png') %>" alt="popular">
+                    <h3>Кольца</h3>
+                </a>
+            </li>
+            <li class="popular__card">
+                <a href="#">
+                    <img src="<%= require('./img/pop_2.svg') %>" alt="popular">
+                    <h3>Серьги</h3>
+                </a>
+            </li>
+            <li class="popular__card">
+                <a href="#">
+                    <img src="<%= require('./img/pop_3.svg') %>" alt="popular">
+                    <h3>Помолвочные кольца</h3>
+                </a>
+            </li>
+            <li class="popular__card">
+                <a href="#">
+                    <img src="<%= require('./img/pop_4.svg') %>" alt="popular">
+                    <h3>Браслеты</h3>
+                </a>
+            </li>
+            <li class="popular__card">
+                <a href="#">
+                    <img src="<%= require('./img/pop_5.svg') %>" alt="popular">
+                    <h3>Колье и подвески</h3>
+                </a>
+            </li>
+            <li class="popular__card">
+                <a href="#">
+                    <img src="<%= require('./img/pop_6.svg') %>" alt="popular">
+                    <h3>Часы</h3>
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <section class="sale">
+        <h2>Распродажа</h2>
+        <div class="sale__btns">
+            <div class="categories">
+                <button type="button" class="categorie active">Кольца</button>
+                <button type="button" class="categorie ">Серьги</button>
+                <button type="button" class="categorie ">Браслеты</button>
+                <button type="button" class="categorie ">Часы</button>
+            </div>
+            <div class="sale__slide-btns">
+                <button class="prev" type="button">
+                </button>
+                <button class="next" type="button">
+                </button>
+            </div>
+        </div>
+
+        <div class="cards">
+            <div class="sale__card">
+                <div class="sale__card_wrap">
+                    <div class="card-body">
+                        <div id="carouselExampleIndicators2" class="carousel slide">
+                            <div class="carousel-indicators">
+                                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0"
+                                        class="active"
+                                        aria-current="true" aria-label="Slide 1"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1"
+                                        aria-label="Slide 2"></button>
+                                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2"
+                                        aria-label="Slide 3"></button>
+                            </div>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="sale__card_badges">
+                                        <span class="sale__card_badges_sale">Sale</span>
+                                    </div>
+                                    <div class="sale__card_actions">
+                                        <button class="heart">
+                                        </button>
+                                        <button class="eyes"></button>
+                                    </div>
+                                    <img src="<%= require('./img/ring_img.png') %>" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="sale__card_badges">
+                                        <span class="sale__card_badges_sale">Sale</span>
+                                    </div>
+                                    <div class="sale__card_actions">
+                                        <button class="heart">
+                                        </button>
+                                        <button class="eyes"></button>
+                                    </div>
+                                    <img src="<%= require('./img/ring_img.png') %>" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="sale__card_badges">
+                                        <span class="sale__card_badges_sale">Sale</span>
+                                    </div>
+                                    <div class="sale__card_actions">
+                                        <button class="heart">
+                                        </button>
+                                        <button class="eyes"></button>
+                                    </div>
+                                    <img src="<%= require('./img/ring_img.png') %>" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prices">
+                            <div class="price">
+                                <p class="price__now">41 000 ₽</p>
+                                <p class="price__old">65 000 ₽</p>
+                            </div>
+                            <p class="price__discount">-45%</p>
+                        </div>
+                        <p class="sale__card_text">Стильное кольцо из белого золота c бриллиантами</p>
+                    </div>
+                    <div class="sale__card_dropdowns">
+                        <div class="dropdown sale__card_dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                Белое золото
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item active" href="#">Белое золото</a></li>
+                                <li><a class="dropdown-item" href="#">Желтое золото</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                        <div class="dropdown sale__card_dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                Белое золото
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item active" href="#">Белое золото</a></li>
+                                <li><a class="dropdown-item" href="#">Желтое золото</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="sale__card">
+                <div class="sale__card_wrap">
+                <div class="card-body">
+                    <div id="carouselExampleIndicators3" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="0"
+                                    class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators3" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="sale__card_badges">
+                                    <span class="sale__card_badges_sale">Sale</span>
+                                </div>
+                                <div class="sale__card_actions">
+                                    <button class="heart">
+                                    </button>
+                                    <button class="eyes"></button>
+                                </div>
+                                <img src="<%= require('./img/sale2.svg') %>" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <div class="sale__card_badges">
+                                    <span class="sale__card_badges_sale">Sale</span>
+                                </div>
+                                <div class="sale__card_actions">
+                                    <button class="heart">
+                                    </button>
+                                    <button class="eyes"></button>
+                                </div>
+                                <img src="<%= require('./img/sale2.svg') %>" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <div class="sale__card_badges">
+                                    <span class="sale__card_badges_sale">Sale</span>
+                                </div>
+                                <div class="sale__card_actions">
+                                    <button class="heart">
+                                    </button>
+                                    <button class="eyes"></button>
+                                </div>
+                                <img src="<%= require('./img/sale2.svg') %>" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prices">
+                        <div class="price">
+                            <p class="price__now">41 000 ₽</p>
+                            <p class="price__old">65 000 ₽</p>
+                        </div>
+                    </div>
+                    <p class="sale__card_text">Стильное кольцо из белого золота c бриллиантами</p>
+                </div>
+                <div class="sale__card_dropdowns">
+                    <div class="dropdown sale__card_dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Белое золото
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="#">Белое золото</a></li>
+                            <li><a class="dropdown-item" href="#">Желтое золото</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown sale__card_dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Белое золото
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="#">Белое золото</a></li>
+                            <li><a class="dropdown-item" href="#">Желтое золото</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="sale__card">
+                <div class="sale__card_wrap">
+                <div class="card-body">
+                    <div id="carouselExampleIndicators4" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="0"
+                                    class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators4" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <div class="sale__card_badges">
+                                    <span class="sale__card_badges_sale"></span>
+                                </div>
+                                <div class="sale__card_actions">
+                                    <button class="heart">
+                                    </button>
+                                    <button class="eyes"></button>
+                                </div>
+                                <img src="<%= require('./img/sale3.svg') %>" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <div class="sale__card_badges">
+                                    <span class="sale__card_badges_sale"></span>
+                                </div>
+                                <div class="sale__card_actions">
+                                    <button class="heart">
+                                    </button>
+                                    <button class="eyes"></button>
+                                </div>
+                                <img src="<%= require('./img/sale3.svg') %>" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <div class="sale__card_badges">
+                                    <span class="sale__card_badges_sale"></span>
+                                </div>
+                                <div class="sale__card_actions">
+                                    <button class="heart">
+                                    </button>
+                                    <button class="eyes"></button>
+                                </div>
+                                <img src="<%= require('./img/sale3.svg') %>" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prices">
+                        <div class="price">
+                            <p class="price__now">37 500 ₽</p>
+                        </div>
+                    </div>
+                    <p class="sale__card_text">Стильное кольцо из белого золота c бриллиантами</p>
+                </div>
+                <div class="sale__card_dropdowns">
+                    <div class="dropdown sale__card_dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Белое золото
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="#">Белое золото</a></li>
+                            <li><a class="dropdown-item" href="#">Желтое золото</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown sale__card_dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Белое золото
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="#">Белое золото</a></li>
+                            <li><a class="dropdown-item" href="#">Желтое золото</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="sale__card">
+                <div class="sale__card_wrap">
+                <div class="card-body">
+                    <div id="carouselExampleIndicators5" class="carousel slide">
+                        <div class="carousel-indicators">
+                            <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="0"
+                                    class="active"
+                                    aria-current="true" aria-label="Slide 1"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="1"
+                                    aria-label="Slide 2"></button>
+                            <button type="button" data-bs-target="#carouselExampleIndicators5" data-bs-slide-to="2"
+                                    aria-label="Slide 3"></button>
+                        </div>
+                        <div class="carousel-inner">
+                            <div class="sale__card_badges">
+                                <span class="sale__card_badges_sale"></span>
+                            </div>
+                            <div class="carousel-item active">
+                                <div class="sale__card_actions">
+                                    <button class="heart">
+                                    </button>
+                                    <button class="eyes"></button>
+                                </div>
+                                <img src="<%= require('./img/sale4.svg') %>" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <div class="sale__card_badges">
+                                    <span class="sale__card_badges_sale"></span>
+                                </div>
+                                <div class="sale__card_actions">
+                                    <button class="heart">
+                                    </button>
+                                    <button class="eyes"></button>
+                                </div>
+                                <img src="<%= require('./img/sale4.svg') %>" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <div class="sale__card_badges">
+                                    <span class="sale__card_badges_sale"></span>
+                                </div>
+                                <div class="sale__card_actions">
+                                    <button class="heart">
+                                    </button>
+                                    <button class="eyes"></button>
+                                </div>
+                                <img src="<%= require('./img/sale4.svg') %>" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prices">
+                        <div class="price">
+                            <p class="price__now">39 200 ₽</p>
+                        </div>
+                    </div>
+                    <p class="sale__card_text">Стильное кольцо из белого золота c бриллиантами</p>
+                </div>
+                <div class="sale__card_dropdowns">
+                    <div class="dropdown sale__card_dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Белое золото
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="#">Белое золото</a></li>
+                            <li><a class="dropdown-item" href="#">Желтое золото</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                    <div class="dropdown sale__card_dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                            Белое золото
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item active" href="#">Белое золото</a></li>
+                            <li><a class="dropdown-item" href="#">Желтое золото</a></li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="best-buy">
+        <div class="cards">
+            <div class="best-buy__card">
+                <div class="best-buy__left">
+                    <h5>Скидки <br> на все украшения с бриллиантами
+                    </h5>
+                    <div class="best-buy__discount">
+                        <p>До</p>
+                        <span>-50%</span>
+                    </div>
+                </div>
+                <img src="<%= require('./img/best_buy_img.svg') %>" alt="best-buy">
+            </div>
+            <div class="best-buy__card">
+                <div class="best-buy__left">
+                    <h5>Скидки <br>на кольца
+                        и браслеты
+                    </h5>
+                    <div class="best-buy__discount best-buy__discount_ring">
+                        <p>До</p>
+                        <span>-40%</span>
+                    </div>
+                </div>
+                <img class="best-buy_ring" src="<%= require('./img/best_buy2.svg') %>" alt="best-buy">
+            </div>
+            <div class="best-buy__card">
+                <div class="best-buy__left">
+                    <h5>снижение цен  на обручальные кольца
+                    </h5>
+                    <div class="best-buy__discount best-buy__discount_wedding">
+                        <p>До</p>
+                        <span>-60%</span>
+                    </div>
+                </div>
+                <img class="best-buy_wedding" src="<%= require('./img/best_buy3.png') %>" alt="best-buy">
+            </div>
+        </div>
+    </section>
+
+    <section class="product">
+        <div class="product__top">
+            <h2>Товар дня</h2>
+            <div class="product__slide-btns">
+                <button class="prev" type="button">
+                </button>
+                <button class="next" type="button">
+                </button>
+            </div>
+        </div>
+        <div class="product__body">
+            <div class="product__left">
+                <div class="product__card">
+                    <div class="card-body">
+                        <div id="carouselExampleIndicators10" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="product__badges">
+                                        <span class="product__badges_new">New</span>
+                                        <span class="product__badges_hit">Хит</span>
+                                        <span class="product__badges_sale">Sale</span>
+                                    </div>
+                                    <img src="<%= require('./img/product__img.png') %>" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="product__badges">
+                                        <span class="product__badges_new">New</span>
+                                        <span class="product__badges_hit">Хит</span>
+                                        <span class="product__badges_sale">Sale</span>
+                                    </div>
+                                    <img src="<%= require('./img/product__img.png') %>" class="d-block w-100" alt="...">
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="product__badges">
+                                        <span class="product__badges_new">New</span>
+                                        <span class="product__badges_hit">Хит</span>
+                                        <span class="product__badges_sale">Sale</span>
+                                    </div>
+                                    <img src="<%= require('./img/product__img.png') %>" class="d-block w-100" alt="...">
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button"
+                                    data-bs-target="#carouselExampleIndicators10"
+                                    data-bs-slide="prev">
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next" type="button"
+                                    data-bs-target="#carouselExampleIndicators10"
+                                    data-bs-slide="next">
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product__right">
+                <div class="product__ratings">
+                    <img src="<%= require('./img/star_full.svg') %>" alt="rating">
+                    <img src="<%= require('./img/star_full.svg') %>" alt="rating">
+                    <img src="<%= require('./img/star_full.svg') %>" alt="rating">
+                    <img src="<%= require('./img/star_full.svg') %>" alt="rating">
+                    <img src="<%= require('./img/star__empty.svg') %>" alt="rating">
+                    <span>4,2</span>
+                </div>
+                <h3>Кольцо из золота с бриллиантами</h3>
+                <p>Артикул: 1012076</p>
+                <div class="product__count">
+                    <div class="prices">
+                        <div class="price">
+                            <p class="price__now">41 000 ₽</p>
+                            <p class="price__old">65 000 ₽</p>
+                        </div>
+                        <p class="price__discount">-45%</p>
+                    </div>
+                    <div class="timer">
+                        <div class="timer__time">
+                            <p class="timer__num">12</p>
+                            <p class="timer__text">часов</p>
+                        </div>
+                        <span class="timer__divider">:</span>
+                        <div class="timer__time">
+                            <p class="timer__num">46</p>
+                            <p class="timer__text">минут</p>
+                        </div>
+                        <span class="timer__divider">:</span>
+                        <div class="timer__time">
+                            <p class="timer__num">51</p>
+                            <p class="timer__text">секунд</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="colors">
+                    <p class="colors__text">цвет</p>
+                    <div class="colors__choose">
+                        <button class="color color_gray active" type="button">
+                        </button>
+                        <button class="color color_yellow" type="button">
+                        </button>
+                        <button class="color color_orange" type="button">
+                        </button>
+                        <button class="color color_green" type="button">
+                        </button>
+                    </div>
+                </div>
+                <div class="sizes">
+                    <div class="sizes__top">
+                        <p class="sizes__text">Размер</p>
+                        <button type="button">
+                            <span>Также как существующая теория напрямую зависит от экономической целесообразности принимаемых решений.</span>
+                        </button>
+                    </div>
+                    <ul class="sizes__choose">
+                        <li class="active">
+                            <button type="button">
+                                16.5
+                            </button>
+                        </li>
+                        <li class="">
+                            <button type="button">
+                                17
+                            </button>
+                        </li>
+                        <li class="">
+                            <button type="button">
+                                17.5
+                            </button>
+                        </li>
+                        <li class="">
+                            <button type="button">
+                                18
+                            </button>
+                        </li>
+                        <li class="">
+                            <button type="button">
+                                18.5
+                            </button>
+                        </li>
+                        <li class="">
+                            <button type="button">
+                                19
+                            </button>
+                        </li>
+                        <li class="">
+                            <button type="button">
+                                19.5
+                            </button>
+                        </li>
+                        <li class="disabled">
+                            <button type="button">
+                                20.5
+                            </button>
+                        </li>
+                    </ul>
+                </div>
+                <div class="product__actions">
+                    <div class="product__buy">
+                        <button type="button">в корзину</button>
+                        <a href="#">купить в 1 клик</a>
+                    </div>
+                    <ul>
+                        <li>
+                            <button class="heart" type="button">Сохранить</button>
+                        </li>
+                        <li>
+                            <button class="chart" type="button">Сравнить</button>
+                        </li>
+                        <li>
+                            <button class="share" type="button">Поделиться</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="articles">
+        <div class="articles__top">
+            <h2>Статьи</h2>
+            <a href="#">Читать все</a>
+        </div>
+        <ul class="articles__cards">
+            <li class="articles__card">
+                <a href="#">
+                    <img src="<%= require('./img/articles__img1.png') %>" alt="Обручальные кольца: тренды 2021">
+                    <div class="articles__footer">
+                        <p class="articles__date">21 сентября 2021</p>
+                        <p class="articles__text">Обручальные кольца: тренды 2021</p>
+                    </div>
+                </a>
+            </li>
+            <li class="articles__card">
+                <a href="#">
+                    <img src="<%= require('./img/art_2.png') %>" alt="Обручальные кольца: тренды 2021">
+                    <div class="articles__footer">
+                        <p class="articles__date">25 сентября 2021</p>
+                        <p class="articles__text">Главные ювелирные тренды года</p>
+                    </div>
+                </a>
+            </li>
+            <li class="articles__card">
+                <a href="#">
+                    <img src="<%= require('./img/art_3.png') %>" alt="Обручальные кольца: тренды 2021">
+                    <div class="articles__footer">
+                        <p class="articles__date">21 сентября 2021</p>
+                        <p class="articles__text">Жемчуг: 7 малоизвестных фактов о культовом украшении</p>
+                    </div>
+                </a>
+            </li>
+            <li class="articles__card">
+                <a href="#">
+                    <img src="<%= require('./img/art_4.png') %>" alt="Обручальные кольца: тренды 2021">
+                    <div class="articles__footer">
+                        <p class="articles__date">21 сентября 2021</p>
+                        <p class="articles__text">ОКак отличить золото от подделки: 10 практических советов</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

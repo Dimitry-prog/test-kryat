@@ -1,0 +1,104 @@
+@import "src/scss/variables";
+
+.best-buy {
+  margin-top: 20px;
+
+  @media screen and (max-width: 900px){
+    margin-top: 120px;
+  }
+
+  .cards {
+    display: flex;
+    gap: 20px;
+
+    @media screen and (max-width: 900px){
+      flex-wrap: wrap;
+    }
+  }
+
+  &__card {
+    width: 100%;
+    max-width: 420px;
+    min-height: 290px;
+    display: flex;
+    gap: 10px;
+    background-color: $primary-color;
+    background-image: url(../img/best_buy_bg.svg);
+    background-repeat: no-repeat;
+    background-position: left center;
+    position: relative;
+
+    @media screen and (max-width: 1300px) {
+      max-width: 387px;
+    }
+
+    @media screen and (max-width: 1030px){
+      img {
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+
+    @media screen and (max-width: 900px){
+      max-width: 350px;
+    }
+
+    @media screen and (max-width: 650px) {
+      max-width: 100%;
+    }
+
+  }
+
+  &__left {
+
+    @media screen and (max-width: 1030px){
+      z-index: 2;
+    }
+
+    h5 {
+      margin: 72px 0 22px 26px;
+      width: 222px;
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 160%;
+      text-transform: uppercase;
+    }
+  }
+
+  &__discount {
+    width: 194px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    background-color: #43807F;
+
+    p {
+      padding-left: 26px;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 160%;
+      margin: 0;
+      color: $white-color;
+    }
+
+    span {
+      font-weight: 600;
+      font-size: 36px;
+      line-height: 160%;
+      color: $white-color;
+    }
+    
+    &_ring {
+      background-color: #E24B33;
+    }
+
+    &_wedding {
+      background-color:  #E1A661;
+    }
+  }
+
+  &_ring, &_wedding {
+    margin-left: -69px;
+  }
+}

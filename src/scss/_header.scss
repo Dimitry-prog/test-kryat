@@ -1,0 +1,237 @@
+@import "src/scss/variables";
+
+.header {
+  max-width: 1300px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 1430px){
+    padding: 0 20px;
+  }
+
+  a {
+    transition: $transition-l;
+
+    &:hover {
+      opacity: $opacity-l;
+    }
+
+    &.active {
+      opacity: $opacity-l;
+    }
+  }
+
+  &__top {
+    padding: 24px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 65px;
+
+    &_dropdown{
+      width: 200px;
+
+      @media screen and (max-width: 600px) {
+        display: none;
+      }
+
+      & > button {
+        width: 100%;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        color: $secondary-color;
+        background-color: $white-color;
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        transition: $transition-l;
+
+        &::before {
+          content: '';
+          display: inline-block;
+          width: 12px;
+          height: 16px;
+          background-image: url(../img/location_mark.svg);
+          background-repeat:no-repeat;
+        }
+        
+        &:hover {
+          color: $black-color;
+          background-color: $white-color;
+          opacity: $opacity-l;
+        }
+      }
+
+      ul {
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            border: none;
+            border-radius: 0;
+            background: $white-color;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+            & a {
+              display: flex;
+              align-items: center;
+              padding: 7px 25px;
+
+              &.active {
+                background-image: url(../img/done.svg);
+                background-repeat: no-repeat;
+                background-position: right 25px center;
+                background-color: $white-color;
+                color: $secondary-color;
+              }
+            }
+      }
+    }
+
+  }
+
+  &__center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1 1 auto;
+
+    & > a {
+      padding-left: 25px;
+      background-image: url(../img/phone.svg);
+      background-repeat: no-repeat;
+      background-position: left center;
+
+      @media screen and (max-width: 988px){
+        display: none;
+      }
+    }
+  }
+
+  &__auth {
+
+    @media screen and (max-width: 988px){
+      display: none;
+    }
+
+    & > span {
+      height: 10px;
+      display: inline-block;
+      border-left: 1px solid #303030;
+      padding-left: 10px;
+      margin-left: 10px;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+
+    @media screen and (max-width: 988px){
+      display: none;
+    }
+
+    .heart {
+      position: relative;
+      background-image: url(../img/favorite.svg);
+
+      & > span {
+        position: absolute;
+        right: -6px;
+        top: -4px;
+        background-color: $accent-color-red;
+        border-radius: 50%;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 100%;
+        color: $white-color;
+        padding: 4px;
+      }
+    }
+
+    .heart, .chart, .cart {
+      width: 32px;
+      height: 32px;
+      background-repeat: no-repeat;
+      background-position: center center;
+      transition: $transition-l;
+
+      &:hover {
+        background-color: $primary-color;
+      }
+
+      &:focus {
+        background-color: $gray-color-dark;
+      }
+    }
+    
+    .chart {
+      background-image: url(../img/chart.svg);
+    }
+    
+    .cart {
+      background-image: url(../img/bag.svg);
+    }
+  }
+
+  &__navbar {
+    padding: 0;
+    background-color: $primary-color;
+
+    & .container-fluid {
+      padding:0;
+    }
+
+    & .navbar-collapse {
+
+      ul {
+        gap: 60px;
+        padding: 25px 0 25px 50px;
+      }
+
+      .nav-link {
+        padding: 0;
+        font-weight: 500;
+        font-size: 13px;
+        line-height: 100%;
+        text-transform: uppercase;
+        color: #303030;
+      }
+    }
+
+    &_mob {
+      @media screen and (min-width: 980px){
+        display: none;
+      }
+    }
+
+    &_desc {
+      @media screen and (max-width: 980px){
+        display: none;
+      }
+    }
+  }
+
+  form {
+    border-left: 1px solid $gray-color;
+    padding-right: 50px;
+
+    img {
+      margin-left: 25px;
+    }
+  }
+
+  .form-control {
+    border-radius: 0;
+    border: none;
+    background-color: transparent;
+
+    &::placeholder {
+      color: #A2A2A2;
+    }
+
+    &:focus {
+      border: none;
+      box-shadow: none;
+    }
+  }
+}

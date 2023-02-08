@@ -1,0 +1,147 @@
+@import "src/scss/variables";
+
+.hero {
+  margin-top: 20px;
+
+  & .carousel-inner {
+    background-color: $primary-color;
+  }
+
+  & .carousel-item {
+    padding: 0 50px 0 126px;
+    justify-content: space-between;
+    background-image: url(../img/Union.svg);
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    @media screen and (max-width: 900px){
+      padding-left: 50px;
+    }
+
+    @media screen and (max-width: 600px){
+      padding: 0;
+    }
+
+    img {
+      width: 548px !important;
+
+      @media screen and (max-width: 900px){
+        width: 320px !important;
+      }
+
+      @media screen and (max-width: 600px){
+        width: 100% !important;
+      }
+    }
+  }
+
+  &__carousel {
+    display: flex;
+
+    @media screen and (max-width: 600px){
+      flex-wrap: wrap;
+    }
+  }
+
+  &__left {
+    padding-top: 176px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    @media screen and (max-width: 900px){
+      padding-top: 20px;
+    }
+
+    @media screen and (max-width: 600px){
+      align-items: center;
+      text-align: center;
+    }
+
+    & > p {
+      font-size: 20px;
+      font-family: 'Prata', sans-serif;
+    }
+
+    & > h1 {
+      font-family: 'Prata', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 50px;
+      line-height: 100%;
+
+      @media screen and (max-width: 600px){
+        font-size: 31px;
+      }
+    }
+
+    & > a {
+      width: 200px;
+      padding: 20px 56px;
+      font-weight: 500;
+      color: $white-color;
+      background-color: $black-color;
+      text-transform: uppercase;
+
+      &:hover {
+        background-color: #505050;
+      }
+
+      &:active {
+        background-color:$black-color;
+      }
+    }
+  }
+
+  & .carousel-control-prev, .carousel-control-next {
+    border: 1px solid #303030;
+    border-radius: 50%;
+    width: 54px;
+    height: 54px;
+    bottom: inherit;
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 100;
+    top: 50%;
+    background-color: transparent;
+    opacity: 1;
+    transition: $transition-l;
+
+    &:hover {
+      background-color: #F5F5F5
+    }
+
+  }
+
+  & .carousel-control-prev {
+    left: 2%;
+    background-image: url(../img/arr_left.svg);
+
+    &:active {
+      background-position: left center;
+    }
+  }
+
+  & .carousel-control-next {
+    right: 2%;
+    background-image: url(../img/arr_right.svg);
+
+    &:active {
+      background-position: right center;
+    }
+  }
+
+  & .carousel-indicators {
+
+    & > button {
+      width: 8px;
+      height: 8px;
+      border: 1px solid #303030;
+      border-radius: 50%;
+
+      &.active {
+        background-color: $black-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,86 @@
+@import "./variables";
+@import "./reset";
+@import "./fonts";
+@import "./global";
+@import "./header";
+@import "./hero";
+@import "./popular";
+@import "./sale";
+@import "./best-buy";
+@import "./product";
+@import "./articles";
+//.navbar {
+//  background-color: #F8F8F8;
+//}
+//
+//.dropdown {
+//  width: 262px;
+//
+//  & .btn {
+//    width: 100%;
+//    display: flex;
+//    justify-content: space-between;
+//    align-items: center;
+//    border: none;
+//    border-radius: 0;
+//    color: #303030;
+//    background-color: #F0F0F0;
+//  }
+//
+//  & .dropdown-menu {
+//    width: 100%;
+//    flex-direction: column;
+//    justify-content: center;
+//    border: none;
+//    border-radius: 0;
+//    background: #FFFFFF;
+//    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+//    & a {
+//      padding: 7px 25px;
+//    }
+//  }
+//}
+//
+//.card {
+//  width: 310px;
+//  height: 370px;
+//  padding: 16px 24px 24px;
+//  border: none;
+//  overflow: hidden;
+//  border-radius: 0;
+//  background: #FFFFFF;
+//  border: 1px solid #F0F0F0;
+//  transition: 0.5s;
+//
+//  &:hover {
+//    height: auto;
+//    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.1);
+//    overflow: inherit;
+//  }
+//
+//  & .card-body {
+//    padding: 0;
+//  }
+//
+//  & .badge {
+//    width: 50px;
+//    background-color: #5B8A8F !important;
+//    border-radius: 15px;
+//  }
+//
+//  & .dots {
+//    display: flex;
+//    flex-direction: column;
+//    justify-content: center;
+//    align-items: center;
+//
+//    img {
+//      width: 200px;
+//    }
+//
+//    img:last-of-type {
+//      width: 45px;
+//    }
+//  }
+//}
+
